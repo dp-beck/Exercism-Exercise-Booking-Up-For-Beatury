@@ -2,7 +2,8 @@ static class Appointment
 {
     public static DateTime Schedule(string appointmentDateDescription)
     {
-        throw new NotImplementedException("Please implement the (static) Appointment.Schedule() method");
+        DateTime.TryParse(appointmentDateDescription, out DateTime appointmentDate);
+        return appointmentDate;
     }
 
     public static bool HasPassed(DateTime appointmentDate)
