@@ -6,23 +6,11 @@ static class Appointment
         return appointmentDate;
     }
 
-    public static bool HasPassed(DateTime appointmentDate)
-    {
-        throw new NotImplementedException("Please implement the (static) Appointment.HasPassed() method");
-    }
+    public static bool HasPassed(DateTime appointmentDate) => appointmentDate < DateTime.Now;
 
-    public static bool IsAfternoonAppointment(DateTime appointmentDate)
-    {
-        throw new NotImplementedException("Please implement the (static) Appointment.IsAfternoonAppointment() method");
-    }
+    public static bool IsAfternoonAppointment(DateTime appointmentDate) => appointmentDate.Hour >= 12 && appointmentDate.Hour < 18;
 
-    public static string Description(DateTime appointmentDate)
-    {
-        throw new NotImplementedException("Please implement the (static) Appointment.Description() method");
-    }
+    public static string Description(DateTime appointmentDate) => $"You have an appointment on {appointmentDate.ToString()}.";
 
-    public static DateTime AnniversaryDate()
-    {
-        throw new NotImplementedException("Please implement the (static) Appointment.AnniversaryDate() method");
-    }
+    public static DateTime AnniversaryDate() => new DateTime(2025, 9, 15, 0, 0, 0);
 }
